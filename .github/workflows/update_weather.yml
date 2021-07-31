@@ -16,8 +16,15 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.1
+
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ github.ref }}
+
       - name: Run
         run: |
           ruby <<- EORUBY
             puts "Hello"
+            
+            puts File.read("./README.md")
           EORUBY
