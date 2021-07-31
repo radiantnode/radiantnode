@@ -35,7 +35,7 @@ jobs:
 
             weather = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body
 
-            content = "```#{weather}```"
+            content = "```\n#{weather}\n```"
 
             readme = File.read(README_FILE)
             readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}\n#{TABLE_PLACEHOLDER_END}")
