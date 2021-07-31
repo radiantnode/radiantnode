@@ -2,7 +2,7 @@ name: Update Weather
 
 on:
   workflow_dispatch:
-  pull_request:
+  #pull_request:
   push:
   schedule:
     # Runs at 12am UTC
@@ -29,13 +29,17 @@ jobs:
             TABLE_PLACEHOLDER_END = '<!--/WEATHER-->'
             TABLE_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
 
-            content = "Wheeeeee"
+            time = Time.now
+            content = "Wheeeeee #{time}"
 
             readme = File.read(README_FILE)
             readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}#{TABLE_PLACEHOLDER_END}")
 
             File.open(README_FILE, 'w') { |f| f.puts readme }
           EORUBY
+          
+          git config --global user.name "Michael Simmons"
+          git config --global user.email "michael@radiantnode.com"
           
           git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
