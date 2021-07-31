@@ -24,7 +24,23 @@ jobs:
       - name: Run
         run: |
           ruby <<- EORUBY
-            puts "Hello"
-            
-            puts File.read("./README.md")
+            README_FILE = './README.md'
+            TABLE_PLACEHOLDER_START = '<!--WEATHER-->'
+            TABLE_PLACEHOLDER_END = '<!--/WEATHER-->'
+            TABLE_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
+
+            content = "Wheeeeee"
+
+            readme = File.read(README_FILE)
+            readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}#{TABLE_PLACEHOLDER_END}")
+
+            File.open(README_FILE, 'w') { |f| f.puts readme }
           EORUBY
+          
+          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          git pull github ${GITHUB_REF} --ff-only
+
+          git add .
+
+          git commit -m "Generated commit"
+          git push github HEAD:${GITHUB_REF}
