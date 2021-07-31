@@ -1,0 +1,21 @@
+name: Update Weather
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs at 12am UTC
+    - cron: "0 0 * * *"
+
+jobs:
+  update-weather:
+    name: Update weather module
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.1
+      - name: Run
+        run: |
+          ruby <<- EORUBY
+            puts "Hello"
+          EORUBY
