@@ -23,17 +23,20 @@ jobs:
 
       - name: Run
         run: |
+          gem install httparty
+          
           ruby <<- EORUBY
+            require 'httparty'
+            
             README_FILE = './README.md'
             TABLE_PLACEHOLDER_START = '<!--WEATHER-->'
             TABLE_PLACEHOLDER_END = '<!--/WEATHER-->'
             TABLE_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
 
-            time = Time.now
-            content = "Wheeeeee #{time}"
+            content = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body
 
             readme = File.read(README_FILE)
-            readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}#{TABLE_PLACEHOLDER_END}")
+            readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}\n#{TABLE_PLACEHOLDER_END}")
 
             File.open(README_FILE, 'w') { |f| f.puts readme }
           EORUBY
