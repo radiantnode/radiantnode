@@ -33,9 +33,9 @@ jobs:
             TABLE_PLACEHOLDER_END = '<!--WEATHER:END-->'
             TABLE_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
 
-            weather = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body.strip
+            weather = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body
 
-            content = "\n\`\`\`\n#{weather}\n\`\`\`\n"
+            content = "\n\`\`\`\n#{weather}\`\`\`\n"
 
             readme = File.read(README_FILE)
             readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}\n#{TABLE_PLACEHOLDER_END}")
