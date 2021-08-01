@@ -13,13 +13,18 @@ jobs:
     name: Update weather module
     runs-on: ubuntu-latest
     steps:
-      - uses: ruby/setup-ruby@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.1
 
-      - uses: actions/checkout@master
+      - name: Checkout code
+        uses: actions/checkout@master
         with:
           ref: ${{ github.ref }}
+
+      - name: Configure git credentials
+        uses: OleksiyRudenko/gha-git-credentials@v2
 
       - name: Run
         run: |
@@ -29,24 +34,21 @@ jobs:
             require 'httparty'
             
             README_FILE = './README.md'
-            TABLE_PLACEHOLDER_START = '<!--WEATHER:BEGIN-->'
-            TABLE_PLACEHOLDER_END = '<!--WEATHER:END-->'
-            TABLE_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
+            WEATHER_PLACEHOLDER_START = '<!-- WEATHER:BEGIN -->'
+            WEATHER_PLACEHOLDER_END = '<!-- WEATHER:END -->'
+            WEATHER_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
 
-            weather = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body
+            weather = HTTParty.get('https://wttr.in/Allen,%20Texas,%20United%20States?TQ0', headers: { 'User-Agent': 'curl' }).body
 
             content = "\n\`\`\`\n#{weather}\`\`\`\n"
 
             readme = File.read(README_FILE)
-            readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}\n#{TABLE_PLACEHOLDER_END}")
+            readme.gsub!(WEATHER_PLACEHOLDER_REGEX, "#{WEATHER_PLACEHOLDER_START}\n#{content}\n#{WEATHER_PLACEHOLDER_END}")
 
             File.open(README_FILE, 'w') { |f| f.puts readme }
           EORUBY
           
-          git config --global user.name "Michael Simmons"
-          git config --global user.email "michael@radiantnode.com"
-          
-          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          git remote add github "https://github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
 
           git add .
