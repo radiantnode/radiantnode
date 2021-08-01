@@ -33,7 +33,7 @@ jobs:
             TABLE_PLACEHOLDER_END = '<!--WEATHER:END-->'
             TABLE_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
 
-            weather = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body
+            weather = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body.strip
 
             content = "\n\`\`\`\n#{weather}\n\`\`\`\n"
 
