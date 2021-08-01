@@ -2,9 +2,9 @@
 
 I am a software engineer living in Allen, Texas with my wife and dog.
 
-<!--WEATHER-->
+<!--WEATHER:BEGIN-->
 
-<!--\/WEATHER-->
+<!--WEATHER:END-->
 
 ---
 
