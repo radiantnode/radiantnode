@@ -5,7 +5,11 @@ I am a software engineer living in Allen, Texas with my wife and dog.
 <!-- WEATHER:BEGIN -->
 
 ```
-    
+      \   /     Sunny
+       .-.      +86(93) °F     
+    ― (   ) ―   ↑ 6 mph        
+       `-’      9 mi           
+      /   \     0.0 in         
 ```
 
 <!-- WEATHER:END -->
