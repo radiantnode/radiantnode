@@ -39,7 +39,9 @@ jobs:
             puts weather.inspect
             puts "------------"
 
-            content = "```\n#{weather}```\n"
+            content = "```\n"
+            content += weather
+            content += "\n```"
 
             readme = File.read(README_FILE)
             readme.gsub!(TABLE_PLACEHOLDER_REGEX, "#{TABLE_PLACEHOLDER_START}\n#{content}\n#{TABLE_PLACEHOLDER_END}")
