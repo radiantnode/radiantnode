@@ -30,7 +30,7 @@ jobs:
             
             README_FILE = './README.md'
             TABLE_PLACEHOLDER_START = '<!--WEATHER-->'
-            TABLE_PLACEHOLDER_END = '<!--/WEATHER-->'
+            TABLE_PLACEHOLDER_END = '<!--\/WEATHER-->'
             TABLE_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
 
             weather = HTTParty.get('https://wttr.in?TQ0', headers: { 'User-Agent': 'curl' }).body
