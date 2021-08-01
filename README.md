@@ -1,6 +1,8 @@
 ### Hi there 👋
 
-I am a software engineer living in Allen, Texas with my wife and dog.
+I am a software engineer with 15+ years of experience making computers do things for money and fun. I live in Allen, Texas with my wife and our dog.
+
+###### Weather in Allen
 
 <!-- WEATHER:BEGIN -->
 
@@ -11,10 +13,11 @@ I am a software engineer living in Allen, Texas with my wife and dog.
        `-’      9 mi           
       /   \     0.0 in         
 ```
-
 <!-- WEATHER:END -->
 
 ---
+
+###### Some things I know
 
 [![Ruby](https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white)](#)
 [![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)](#)
