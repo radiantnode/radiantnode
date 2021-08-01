@@ -4,7 +4,7 @@ I am a software engineer living in Allen, Texas with my wife and dog.
 
 <!--WEATHER:BEGIN-->
 
-Wheeeeeee
+```Wheeeeeee```
 
 <!--WEATHER:END-->
 
