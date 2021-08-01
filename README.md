@@ -3,11 +3,7 @@
 I am a software engineer living in Allen, Texas with my wife and dog.
 
 <!--WEATHER:BEGIN-->
-     \  /       Partly cloudy
-   _ /"".-.     64 °F          
-     \_(   ).   ↑ 2 mph        
-     /(___(__)  6 mi           
-                0.0 in         
+
 
 <!--WEATHER:END-->
 
