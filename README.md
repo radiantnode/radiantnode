@@ -4,7 +4,14 @@ I am a software engineer living in Allen, Texas with my wife and dog.
 
 <!--WEATHER:BEGIN-->
 
-```Wheeeeeee```
+```
+     \  /       Partly cloudy
+   _ /"".-.     10 °C          
+     \_(   ).   ↖ 4 km/h       
+     /(___(__)  10 km          
+                0.0 mm         
+
+```
 
 <!--WEATHER:END-->
 
