@@ -38,7 +38,7 @@ jobs:
             README_FILE = './README.md'
             WEATHER_PLACEHOLDER_START = '<!-- WEATHER:BEGIN -->'
             WEATHER_PLACEHOLDER_END = '<!-- WEATHER:END -->'
-            WEATHER_PLACEHOLDER_REGEX = /#{TABLE_PLACEHOLDER_START}[\s\S]*?#{TABLE_PLACEHOLDER_END}/
+            WEATHER_PLACEHOLDER_REGEX = /#{WEATHER_PLACEHOLDER_START}[\s\S]*?#{WEATHER_PLACEHOLDER_END}/
 
             weather = HTTParty.get('https://wttr.in/Allen,%20Texas,%20United%20States?TQ0', headers: { 'User-Agent': 'curl' }).body
 
