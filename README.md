@@ -9,11 +9,11 @@ I am a software engineer with 15+ years of experience making computers do things
 <!-- WEATHER:BEGIN -->
 
 ```
-      \   /     Sunny
-       .-.      +86(93) °F     
-    ― (   ) ―   ↑ 6 mph        
-       `-’      9 mi           
-      /   \     0.0 in         
+     \  /       Partly cloudy
+   _ /"".-.     +87(96) °F     
+     \_(   ).   ↑ 11 mph       
+     /(___(__)  9 mi           
+                0.0 in         
 ```
 
 <!-- WEATHER:END -->
