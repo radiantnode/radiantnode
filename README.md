@@ -10,10 +10,10 @@ I am a software engineer with 15+ years of experience making computers do things
 
 ```
      \  /       Partly cloudy
-   _ /"".-.     +87(96) °F     
-     \_(   ).   ↑ 11 mph       
-     /(___(__)  9 mi           
-                0.0 in         
+   _ /"".-.     +29(30) °C     
+     \_(   ).   ↗ 9 km/h       
+     /(___(__)  16 km          
+                0.2 mm         
 ```
 
 <!-- WEATHER:END -->
