@@ -42,7 +42,7 @@ jobs:
 
             weather = HTTParty.get('https://wttr.in/Allen,%20Texas,%20United%20States?TQ0', headers: { 'User-Agent': 'curl' }).body
 
-            content = "\n\`\`\`\n#{weather}\`\`\`\n"
+            content = "\n\`\`\`\nWeater in Allen:\n#{weather}\`\`\`\n"
 
             readme = File.read(README_FILE)
             readme.gsub!(WEATHER_PLACEHOLDER_REGEX, "#{WEATHER_PLACEHOLDER_START}\n#{content}\n#{WEATHER_PLACEHOLDER_END}")
