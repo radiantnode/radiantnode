@@ -8,10 +8,10 @@ I'm an engineer with 15+ years of experience making computers do things for mone
 Weather in Allen:
 
       \   /     Sunny
-       .-.      +42(39) °F     
-    ― (   ) ―   ↑ 8 mph        
-       `-’      9 mi           
-      /   \     0.0 in         
+       .-.      +6(4) °C       
+    ― (   ) ―   ↑ 13 km/h      
+       `-’      16 km          
+      /   \     0.0 mm         
 ```
 
 <!-- WEATHER:END -->
