@@ -5,11 +5,11 @@ I am a software engineer with 15+ years of experience making computers do things
 <!-- WEATHER:BEGIN -->
 
 ```
-     \  /       Partly cloudy
-   _ /"".-.     +31(42) °C     
-     \_(   ).   ↑ 22 km/h      
-     /(___(__)  16 km          
-                1.4 mm         
+      \   /     Sunny
+       .-.      +42(39) °F     
+    ― (   ) ―   ↑ 8 mph        
+       `-’      9 mi           
+      /   \     0.0 in         
 ```
 
 <!-- WEATHER:END -->
