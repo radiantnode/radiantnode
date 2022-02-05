@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I am a software engineer with 15+ years of experience making computers do things for money and fun. I live in Allen, Texas with my wife and our dog.
+I'm an engineer with 15+ years of experience making computers do things for money and fun. I live in Allen, Texas with my wife and our dog.
 
 <!-- WEATHER:BEGIN -->
 
