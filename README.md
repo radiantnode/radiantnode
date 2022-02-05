@@ -5,12 +5,13 @@ I am a software engineer with 15+ years of experience making computers do things
 <!-- WEATHER:BEGIN -->
 
 ```
-Weater in Allen:
+Weather in Allen:
+
       \   /     Sunny
-       .-.      +6(4) °C       
-    ― (   ) ―   ↑ 13 km/h      
-       `-’      16 km          
-      /   \     0.0 mm         
+       .-.      +42(39) °F     
+    ― (   ) ―   ↑ 8 mph        
+       `-’      9 mi           
+      /   \     0.0 in         
 ```
 
 <!-- WEATHER:END -->
