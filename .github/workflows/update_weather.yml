@@ -32,28 +32,12 @@ jobs:
         run: |
           gem install httparty
           
-          ruby <<- EORUBY
-            require 'httparty'
-            
-            README_FILE = './README.md'
-            WEATHER_PLACEHOLDER_START = '<!-- WEATHER:BEGIN -->'
-            WEATHER_PLACEHOLDER_END = '<!-- WEATHER:END -->'
-            WEATHER_PLACEHOLDER_REGEX = /#{WEATHER_PLACEHOLDER_START}[\s\S]*?#{WEATHER_PLACEHOLDER_END}/
-
-            weather = HTTParty.get('https://wttr.in/Allen,%20Texas,%20United%20States?TQ0', headers: { 'User-Agent': 'curl' }).body
-
-            content = "\n\`\`\`\nWeater in Allen:\n#{weather}\`\`\`\n"
-
-            readme = File.read(README_FILE)
-            readme.gsub!(WEATHER_PLACEHOLDER_REGEX, "#{WEATHER_PLACEHOLDER_START}\n#{content}\n#{WEATHER_PLACEHOLDER_END}")
-
-            File.open(README_FILE, 'w') { |f| f.puts readme }
-          EORUBY
+          ruby update_weather.rb
           
           git remote add github "https://github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
 
           git add .
 
-          git commit -m "Generated commit"
+          git commit -m "Updating weather forecast (automated)"
           git push github HEAD:${GITHUB_REF}
