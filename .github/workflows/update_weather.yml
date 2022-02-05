@@ -32,7 +32,7 @@ jobs:
         run: |
           gem install httparty
           
-          ruby update_weather.rb
+          ruby scripts/update_weather.rb
           
           git remote add github "https://github.com/$GITHUB_REPOSITORY.git"
           git pull github ${GITHUB_REF} --ff-only
