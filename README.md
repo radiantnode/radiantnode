@@ -10,8 +10,8 @@ I'm an engineer with 19 years of experience making computers do things for money
 Weather in Allen:
 
      \  /       Partly cloudy
-   _ /"".-.     +31(34) °C     
-     \_(   ).   ↑ 13 km/h      
+   _ /"".-.     17 °C          
+     \_(   ).   ↑ 11 km/h      
      /(___(__)  16 km          
                 0.0 mm         
 ```
