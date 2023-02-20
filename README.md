@@ -1,7 +1,10 @@
+[![](https://user-images.githubusercontent.com/41691/220166352-c252a5fd-470b-4d38-8c4c-f6b6c21911f6.jpeg)](#)
+
 ### Hi there 👋
 
 <!--
-**radiantnode/radiantnode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**radiantnode/radi![Uploading IMG_0407.jpeg…]()
+antnode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
