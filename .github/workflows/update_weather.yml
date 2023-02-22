@@ -36,6 +36,7 @@ jobs:
             s/[^<>]*/'"$weather"'/g' \
             README.md
 
+
           git add .
 
           git commit -m "Updating weather forecast (automated)"
