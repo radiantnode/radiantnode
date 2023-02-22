@@ -30,12 +30,11 @@ jobs:
 
       - name: Run
         run: |
-          gem install httparty
-          
-          ruby scripts/update_weather.rb
-          
-          git remote add github "https://github.com/$GITHUB_REPOSITORY.git"
-          git pull github ${GITHUB_REF} --ff-only
+          weather=$(curl https://wttr.in/Allen,%20Texas,%20United%20States?0QTA --silent)
+        
+          sed -i '/<!-- WEATHER:BEGIN -->/,/<!-- WEATHER:END -->/ \
+            s/[^<>]*/'"$weather"'/g' \
+            README.md
 
           git add .
 
