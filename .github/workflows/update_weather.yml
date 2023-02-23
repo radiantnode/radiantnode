@@ -32,10 +32,7 @@ jobs:
         run: |
           weather=$(curl https://wttr.in/Allen,%20Texas,%20United%20States?0QTA --silent)
         
-          sed -i '/<!-- WEATHER:BEGIN -->/,/<!-- WEATHER:END -->/ \
-            s/[^<>]*/'"$weather"'/g' \
-            README.md
-
+          sed '/<!-- WEATHER:BEGIN -->/,/<!-- WEATHER:END -->/ s/[^<>]*/'"$weather"'/g' README.md
 
           git add .
 
