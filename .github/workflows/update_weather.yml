@@ -1,0 +1,40 @@
+name: Update Weather
+
+on:
+  workflow_dispatch:
+  #pull_request:
+  push:
+  schedule:
+    # Runs at 12am UTC
+    - cron: "0 0 * * *"
+
+jobs:
+  update-weather:
+    name: Update weather module
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.1
+
+      - name: Checkout code
+        uses: actions/checkout@master
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Configure git credentials
+        uses: OleksiyRudenko/gha-git-credentials@v2
+        with:
+          token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Run
+        run: |
+          weather=$(curl https://wttr.in/Allen,%20Texas,%20United%20States\?0QTA --silent)
+        
+          sed '/<!-- WEATHER:BEGIN -->/,/<!-- WEATHER:END -->/ s#[^<>]*#'"${weather//\//\\/}"'#g' README.md
+
+          git add .
+
+          git commit -m "Updating weather forecast (automated)"
+          git push github HEAD:${GITHUB_REF}

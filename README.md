@@ -2,18 +2,18 @@
 
 ### Hi there 👋
 
-<!--
-**radiantnode/radi![Uploading IMG_0407.jpeg…]()
-antnode** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm an engineer with 19 years of experience making computers do things for money and fun. I live in Allen, Texas with my wife and our two dogs.
 
-Here are some ideas to get you started:
+<!-- WEATHER:BEGIN -->
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```
+Weather in Allen:
+
+     \  /       Partly cloudy
+   _ /"".-.     17 °C          
+     \_(   ).   ↑ 11 km/h      
+     /(___(__)  16 km          
+                0.0 mm         
+```
+
+<!-- WEATHER:END -->
