@@ -30,7 +30,7 @@ jobs:
 
       - name: Run
         run: |
-          weather=$(curl https://wttr.in/Allen,%20Texas,%20United%20States?0QTA --silent)
+          weather=$(curl https://wttr.in/Allen,%20Texas,%20United%20States\?0QTA --silent)
         
           sed '/<!-- WEATHER:BEGIN -->/,/<!-- WEATHER:END -->/ s/[^<>]*/'"$weather"'/g' README.md
 
