@@ -1,8 +1,8 @@
 ### Hi there 👋
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="profile-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="profile-light.svg">
+  <source media="(prefers-color-scheme: dark)"  srcset="profile-dark.svg?2">
+  <source media="(prefers-color-scheme: light)" srcset="profile-light.svg?2">
   <img src="profile-light.svg" alt="Michael Simmons — Personal Stats" width="900">
 </picture>
 
