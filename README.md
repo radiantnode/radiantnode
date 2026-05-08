@@ -1,9 +1,9 @@
 ### Hi there 👋
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="profile-dark.svg?20000">
-  <source media="(prefers-color-scheme: light)" srcset="profile-light.svg?20000">
-  <img src="profile-light.svg?20000" alt="Michael Simmons — Personal Stats" width="900">
+  <source media="(prefers-color-scheme: dark)"  srcset="https://cdn1.simmons.cloud/github/profile/stats/1778275566/profile-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn1.simmons.cloud/github/profile/stats/1778275566/profile-light.svg">
+  <img src="https://cdn1.simmons.cloud/github/profile/stats/1778275566/profile-light.svg" alt="Michael Simmons — Personal Stats" width="900">
 </picture>
 
 
