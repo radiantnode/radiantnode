@@ -1,6 +1,12 @@
-[![](https://user-images.githubusercontent.com/41691/220166352-c252a5fd-470b-4d38-8c4c-f6b6c21911f6.jpeg)](#)
-
 ### Hi there 👋
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="profile-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="profile-light.svg">
+  <img src="profile-light.svg" alt="Michael Simmons — Personal Stats" width="900">
+</picture>
+
+
 
 <!--
 **radiantnode/radi![Uploading IMG_0407.jpeg…]()
